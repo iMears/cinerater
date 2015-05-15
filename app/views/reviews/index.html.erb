@@ -1,13 +1,18 @@
 <br><br><br><br><br>
-<% @reviews.each do |review| %>
-  <div class="well review">
-    <h3 class="text-center"><%= review.movie_title %></h3>
-    <p class="text-center">Reviewed <%= time_ago_in_words(review.created_at) %> ago by <%= review.email %></p>
-    <br>
-    <h4 class="text-center">Rating: <%= review.rating %>/5</h4>
-    <% if review.comment %>
-      <h4 class="text-center">Comment: <%= review.comment %></h4>
-    <% end %>
+<div class="container">
+  <div class="row">
+  <% @reviews.each do |review| %>
+    <div class="col-md-4 col-sm-6 well review">
+      <h3 class="text-center"><%= review.movie_title %></h3>
+      <p class="text-center">Reviewed <%= time_ago_in_words(review.created_at) %> ago by <%= review.email %></p>
+      <h4 class="text-center">Rating: <%= review.rating %>/5</h4>
+      <% if review.comment %>
+        <h4 class="text-center">Comment: <%= review.comment %></h4>
+      <% end %>
+    </div>
+  <% end %>
   </div>
-  <br><br>
-<% end %>
+  <% if @reviews.empty? %>
+    <h3 class="well text-center">Sorry! That movie has not been reviewed.</h3>
+  <% end %>
+</div>

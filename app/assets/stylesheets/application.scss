@@ -48,7 +48,6 @@ video#bgvid {
 }
 
 table {
-  background-color: white;
   opacity: .9;
 }
 
@@ -68,13 +67,14 @@ table {
   font-size: 18px;
 }
 
-.flash {
-  z-index: 100;
-  color: white;
-}
-
 .review {
   opacity: .9;
-  max-width: 500px;
+  min-height: 200px;
+  max-height: 200px;
+  overflow: scroll;
+}
+
+.table-container {
+  max-width: 700px;
   margin: 0 auto;
 }

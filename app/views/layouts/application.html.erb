@@ -21,15 +21,15 @@
         <li><%= link_to "All Reviews", reviews_index_path %></li>
 
     </ul>
-      <form class="navbar-form navbar-right" action="/movie" method="get">
-        <input type="text" name="movie" class="form-control" placeholder="Search for a movie...">
+      <form class="navbar-form navbar-right" action="/reviews/index" method="get">
+        <input type="text" name="movie_title" class="form-control" placeholder="Search for a movie...">
         <input type="submit" class="form-control" value="Search">
       </form>
     </div>
   </nav>
   <%= video_tag "intersteller.mp4", id: "bgvid", autoplay: true, muted: true %>
   <% flash.each do |key, value| %>
-    <%= content_tag :div, value, class: "flash #{key} text-center" %>
+    <h3><%= content_tag :div, value, class: "flash #{key} text-center well " %></h3>
   <% end %>
   <%= yield %>
 </body>

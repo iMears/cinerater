@@ -18,7 +18,7 @@ class ReviewsController < ApplicationController
     if params[:movie_title]
       @reviews = Review.where(movie_title: params[:movie_title])
     else
-      @reviews = Review.all
+      @reviews = Review.all.reverse
     end
   end
 
