@@ -1,6 +1,13 @@
+<br><br><br><br><br>
 <% @reviews.each do |review| %>
-  <h3>Movie Title: <%= review.movie_title %></h3>
-  <h3>Reviewed by: <%= review.email %></h3>
-  <h3>Rating: <%= review.rating %></h3>
+  <div class="well review">
+    <h3 class="text-center"><%= review.movie_title %></h3>
+    <p class="text-center">Reviewed <%= time_ago_in_words(review.created_at) %> ago by <%= review.email %></p>
+    <br>
+    <h4 class="text-center">Rating: <%= review.rating %>/5</h4>
+    <% if review.comment %>
+      <h4 class="text-center">Comment: <%= review.comment %></h4>
+    <% end %>
+  </div>
   <br><br>
 <% end %>

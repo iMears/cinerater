@@ -17,6 +17,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'devise'
 gem 'jquery-tablesorter', '~> 1.16.5'
+gem 'jquery-turbolinks'
 
 group :development do
   gem 'guard-rspec'
