@@ -16,3 +16,24 @@
 //= require jquery-tablesorter
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+  $.ajax('movies.json', {
+    success: function(response) {
+      var movies = []
+      console.log(response)
+      for (var key in response) {
+        movies.push("<tr>" +
+          "<td>" + response[key]['movieName'] + "</td>" +
+          "<td>" + response[key]['releaseyear'] + "</td>" +
+          "<td>" + response[key]['genre'] + "</td>"
+          + "</tr>");
+      };
+
+      for (var i = 0; i < movies.length; i++) {
+        $('tbody').append(movies[i])
+      };
+      $("#myTable").tablesorter();
+    }
+  });
+});

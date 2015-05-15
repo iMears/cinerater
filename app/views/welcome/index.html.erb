@@ -19,4 +19,18 @@
 
 <h1 id="about">Cine<span id="rater">Rater<span></h1>
 <h1 id="sub-about">FIND AND RATE YOUR FAVORITE MOVIES!</h1>
-<%= video_tag "intersteller.mp4", id: "bgvid", autoplay: true, muted: true, loop: true, autobuffer: true %>
+<%= video_tag ["avengers.mp4", "intersteller.mp4"], id: "bgvid", autoplay: true, muted: true, loop: true, autobuffer: true %>
+
+<br><br><br>
+<table id="myTable" class="tablesorter table ">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Release Date</th>
+      <th>Genre</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  </tbody>
+</table>

@@ -46,3 +46,8 @@ video#bgvid {
   color: white;
   font-size: 26px;
 }
+
+table {
+  background-color: white;
+  opacity: .9;
+}
