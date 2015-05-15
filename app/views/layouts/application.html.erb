@@ -8,8 +8,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <%= video_tag "intersteller.mp4", id: "bgvid", autoplay: true, muted: true %>
+  <% flash.each do |key, value| %>
+    <%= content_tag :div, value, class: "flash #{key} text-center" %>
+  <% end %>
+  <%= yield %>
 </body>
 </html>

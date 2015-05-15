@@ -24,7 +24,7 @@ $(document).ready(function() {
       console.log(response)
       for (var key in response) {
         movies.push("<tr>" +
-          "<td>" + response[key]['movieName'] + "</td>" +
+          "<td><a href='reviews/new/?movie_title="+ response[key]['movieName'] +"'>" + response[key]['movieName'] + "</a></td>" +
           "<td>" + response[key]['releaseyear'] + "</td>" +
           "<td>" + response[key]['genre'] + "</td>"
           + "</tr>");

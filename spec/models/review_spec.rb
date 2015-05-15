@@ -5,7 +5,7 @@ RSpec.describe Review, type: :model do
 
   describe "ActiveModel validations" do
     it { expect(review).to validate_presence_of(:email) }
-    it { expect(review).to validate_presence_of(:created_at) }
     it { expect(review).to validate_presence_of(:rating) }
+    it { expect(review).to validate_presence_of(:movie_title) }
   end
 end
