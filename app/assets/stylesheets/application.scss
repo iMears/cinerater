@@ -14,7 +14,7 @@
  *= require_self
  */
 
-video#bgvid {
+#bgvid {
   position: fixed;
   bottom: 0;
   min-width: 100%;
@@ -32,7 +32,7 @@ video#bgvid {
   text-align: center;
   margin-bottom: 0;
   font-size: 125px;
-  padding-top: 125px;
+  padding-top: 75px;
   color: white;
 }
 
@@ -77,4 +77,14 @@ table {
 .table-container {
   max-width: 700px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+  #about {
+    font-size: 60px;
+  }
+
+  #sub-about {
+    font-size: 14px;
+  }
 }
